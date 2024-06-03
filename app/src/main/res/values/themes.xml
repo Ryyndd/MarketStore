@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MarketStore" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/blue</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.MarketStore" parent="Base.Theme.MarketStore" />
+
+    <!-- Style for round button -->
+    <!-- Style for round button -->
+    <style name="RoundButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">40dp</item>
+        <item name="cornerSize">50%</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+
+
+</resources>

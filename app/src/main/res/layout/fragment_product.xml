@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".main.ProductFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuideKiriAtas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuideKananAtas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp"/>
+
+
+        <SearchView
+            android:id="@+id/cvSearch"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:queryHint="Search.."
+            android:inputType="text"
+            android:background="@drawable/rounded_search"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+            app:layout_constraintEnd_toStartOf="@id/GuideKananAtas">
+
+            <com.google.android.material.search.SearchBar
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:hideNavigationIcon="true"/>
+
+        </SearchView>
+
+        <TextView
+            android:id="@+id/tvProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="All Product"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/primary_black"
+            app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+            app:layout_constraintTop_toBottomOf="@id/cvSearch"
+            app:layout_constraintEnd_toEndOf="@id/GuideKananAtas"/>
+
+        <HorizontalScrollView
+            android:id="@+id/layoutCategory"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvProduct"
+            app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+            app:layout_constraintEnd_toEndOf="@id/GuideKananAtas">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:layout_marginEnd="2dp"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/blue"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSmartphones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smartphones"
+                    android:textSize="13sp"
+                    app:strokeWidth="1dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginHorizontal="2dp"
+                    app:strokeColor="@color/blue"
+                    android:backgroundTint="@color/white"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnComputers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Computers"
+                    android:textSize="13sp"
+                    app:strokeWidth="1dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginHorizontal="2dp"
+                    app:strokeColor="@color/blue"
+                    android:backgroundTint="@color/white"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLaptops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laptops"
+                    android:textSize="13sp"
+                    app:strokeWidth="1dp"
+                    android:textColor="@color/blue"
+                    android:layout_marginHorizontal="2dp"
+                    app:strokeColor="@color/blue"
+                    android:backgroundTint="@color/white"/>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/card_layout"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:spanCount="2"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCategory"
+            app:layout_constraintStart_toStartOf="@+id/GuideKiriAtas"
+            app:layout_constraintEnd_toEndOf="@+id/GuideKananAtas"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

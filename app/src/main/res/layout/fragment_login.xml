@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".auth.LoginFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuideAtas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuideKiriAtas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="50dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuideKananAtas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="50dp"
+        />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:fontFamily="@font/poppins_medium"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+        app:layout_constraintTop_toTopOf="@id/GuideAtas"
+        app:layout_constraintEnd_toEndOf="@id/GuideKananAtas"
+        />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:textAlignment="center"
+        android:text="Please login to continue our app."
+        android:textColor="@color/abu_800"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintEnd_toEndOf="@id/GuideKananAtas"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="USERNAME"
+        app:hintTextColor="@color/primary_black"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="5dp"
+        app:boxStrokeColor="@color/black"
+        app:cursorColor="@color/black"
+        android:textColorHint="@color/primary_black"
+        app:layout_constraintEnd_toEndOf="@id/GuideKananAtas"
+        app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="PASSWORD"
+        app:hintTextColor="@color/primary_black"
+        android:textColorHint="@color/primary_black"
+        android:paddingVertical="5dp"
+        app:boxStrokeColor="@color/black"
+        app:cursorColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/GuideKananAtas"
+        app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPassword"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="LOGIN"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/GuideKananAtas"
+        app:layout_constraintStart_toStartOf="@id/GuideKiriAtas"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword"
+        />
+    
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

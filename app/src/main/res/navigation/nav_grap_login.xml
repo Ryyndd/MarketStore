@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap_login"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.marketstore.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginSuccesFragment"
+            app:destination="@id/loginSuccesFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_loginFailedFragment"
+            app:destination="@id/loginFailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginSuccesFragment"
+        android:name="com.example.marketstore.auth.LoginSuccesFragment"
+        android:label="fragment_login_succes"
+        tools:layout="@layout/fragment_login_succes" />
+    <fragment
+        android:id="@+id/loginFailedFragment"
+        android:name="com.example.marketstore.auth.LoginFailedFragment"
+        android:label="fragment_login_failed"
+        tools:layout="@layout/fragment_login_failed" >
+        <action
+            android:id="@+id/action_loginFailedFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
